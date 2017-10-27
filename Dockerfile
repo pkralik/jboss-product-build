@@ -12,7 +12,7 @@ RUN mkdir -p $HOME/.m2
 
 ADD settings.xml $HOME/.m2/settings.xml
 
-RUN git clone https://github.com/pkralik/amq-bom-license-generator.git $HOME
+RUN git clone https://github.com/pkralik/amq-bom-license-generator.git
 
 WORKDIR $HOME/amq-bom-license-generator
 
