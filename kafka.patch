@@ -1,8 +1,17 @@
 diff --git a/build.gradle b/build.gradle
-index 9a221d9..f47ed43 100644
+index 9a221d9..7573652 100644
 --- a/build.gradle
 +++ b/build.gradle
-@@ -37,6 +37,8 @@ apply from: "$rootDir/gradle/dependencies.gradle"
+@@ -17,6 +17,8 @@ import org.ajoberstar.grgit.Grgit
+ 
+ buildscript {
+   repositories {
++    maven { url "http://maven.repository.redhat.com/ga/" }
++    maven { url "http://maven.repository.redhat.com/techpreview/all/" }
+     mavenCentral()
+     jcenter()
+   }
+@@ -37,6 +39,8 @@ apply from: "$rootDir/gradle/dependencies.gradle"
  allprojects {
  
    repositories {
