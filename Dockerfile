@@ -20,4 +20,4 @@ ADD settings.xml .m2/settings.xml
 RUN git clone https://github.com/apache/kafka.git
 ADD kafka.patch kafka/kafka.patch
 
-RUN cd kafka && patch -p1 -i kafka.patch && gradle && ./gradlew clean && ./gradlew -Pversion=1.0.0.DR1 releaseTarGz
+RUN cd kafka && patch -p1 -i kafka.patch && gradle && ./gradlew clean && ./gradlew -Pversion=1.0.0.DR1-redhat-1 releaseTarGz
