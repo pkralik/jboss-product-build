@@ -21,3 +21,5 @@ RUN git clone https://github.com/apache/kafka.git
 ADD kafka.patch kafka/kafka.patch
 
 RUN cd kafka && patch -p1 -i kafka.patch && gradle && ./gradlew clean && ./gradlew -Pversion=1.0.0.DR1-redhat-1 releaseTarGz
+
+RUN tar xzf kafka/core/build/distributions/kafka_2.11-1.0.0.DR1-redhat-1.tgz
